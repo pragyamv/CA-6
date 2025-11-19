@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --accent: #1919e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  background: #ffffff;
+  color: #111;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  position: fixed;
+  left: 40px;
+  top: 40px;
+  z-index: 40;
+}
+
+.hamburger button {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.navbox {
+  position: fixed;
+  left: 40px;
+  top: 90px;
+  background: #fff;
+  border: 2px solid #111;
+  padding: 18px;
+  border-radius: 10px;
+  min-width: 160px;
+  z-index: 50;
+}
+
+.logo {
+  font-size: 48px;
+  color: var(--accent);
+  letter-spacing: 6px;
+}
+
+.card {
+  box-shadow: 6px 8px 14px rgba(0,0,0,0.15);
+  padding: 8px;
+}
+
+.big-img {
+  width: 320px;
+  height: auto;
+  box-shadow: 10px 10px 24px rgba(0,0,0,0.18);
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: 2px solid #111;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.footer-btn {
+  position: fixed;
+  right: 80px;
+  bottom: 40px;
+}
+
+.input {
+  width: 60%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #222;
+}
+
+.box {
+  width: 420px;
+  height: 240px;
+  border-radius: 12px;
+  border: 2px solid #222;
+}
+
+.text-block {
+  max-width: 600px;
+  margin-left: 48px;
+}
+
+.fade-slow-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-slow-out {
+  animation: fadeOut 1.2s ease forwards;
+}
+
+.fade-fast {
+  animation: fadeIn 0.35s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  width: 0;
+  z-index: 9999;
+  transition: width 0.4s ease;
+}
+
+.loading-bar.active {
+  width: 100%;
+}
