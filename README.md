@@ -99,4 +99,4 @@ Its small size and efficiency make it ideal for **local inference through Ollama
 
 A sample result showing both the predicted label and the generated natural-language description for an uploaded cat image.
 
-
+![Example](example.png)
